@@ -2,39 +2,33 @@ package main
 
 import "fmt"
 
-var globalA = 5
+const username = "lee"
 
 /*
-*
-변수 선언 방식 => var [변수이름] [변수형] = [초기값]
-별다른 형 선언 없이(func 내에서만 사용가능) => [변수이름] := [초기값]
+상수를 괄호로 묶어 선언하는 경우
+값이 선언되지 않은 상수는 바로 전 상수의 값을 가진다.
+iota라는 식별자를 값으로 초기화하면 그 다음 상수들은 순서가 값으로 저장된다.
 */
+const (
+	c1 = 10
+	c2
+	c3
+	c4
+	c5
+	c6 = iota
+	c7
+	c8
+	c9 = "earth"
+	c10
+	c11 = "End"
+)
+
 func main() {
-	var a string = "goorm"
-	fmt.Println(a)
+	//상수 개별 선언
+	const a int = 1
+	const b, d = 10, 20
+	const c = "goorm"
 
-	var b int = 10
-	fmt.Println(b)
-
-	var d = true
-	fmt.Println(d)
-
-	var e int
-	fmt.Println(e)
-
-	f := "short"
-	fmt.Println(f)
-
-	fmt.Println(globalA)
-
-	// 여러 개의 변수를 한 번에 선언하고 초기화할 수 있다.
-	var num1, num2 int = 10, 20
-	fmt.Println(num1, num2)
-
-	i, j, k := 1, 2, 3
-	fmt.Println(i, j, k)
-
-	var str1, str2 string = "Hello", "goorm"
-	fmt.Println(str1, str2)
-
+	fmt.Println(username)
+	fmt.Println(c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11)
 }
