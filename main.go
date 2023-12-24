@@ -2,27 +2,39 @@ package main
 
 import "fmt"
 
+var globalA = 5
+
+/*
+*
+변수 선언 방식 => var [변수이름] [변수형] = [초기값]
+별다른 형 선언 없이(func 내에서만 사용가능) => [변수이름] := [초기값]
+*/
 func main() {
-	var num1 int = 1
-	var num2 int = 2
+	var a string = "goorm"
+	fmt.Println(a)
 
-	//fmt 패키지를 사용하지 않는 경우
-	print("Hello goorm!")
-	print(num1)
-	print(num2)
-	print(num1 + num2)
-	print("Hello goorm!", num1+num2, "\n")
+	var b int = 10
+	fmt.Println(b)
 
-	println("Hello goorm!")
-	println(num1)
-	println(num2)
-	println(num1 + num2)
-	println("Hello goorm!", num1+num2)
+	var d = true
+	fmt.Println(d)
 
-	//fmt 패키지를 사용하는 경우
-	fmt.Print("Hello goorm!", num1, num2, "\n")
+	var e int
+	fmt.Println(e)
 
-	fmt.Println("Hello goorm!", num1, num2)
+	f := "short"
+	fmt.Println(f)
 
-	fmt.Printf("num1의 값은:%d num2의 값은:%d\n", num1, num2)
+	fmt.Println(globalA)
+
+	// 여러 개의 변수를 한 번에 선언하고 초기화할 수 있다.
+	var num1, num2 int = 10, 20
+	fmt.Println(num1, num2)
+
+	i, j, k := 1, 2, 3
+	fmt.Println(i, j, k)
+
+	var str1, str2 string = "Hello", "goorm"
+	fmt.Println(str1, str2)
+
 }
