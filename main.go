@@ -3,18 +3,28 @@ package main
 import "fmt"
 
 func main() {
-	//백틱 안에 있으면 개행문자열(\n)이 특별한 의미로 인식되지 않음
-	//백틱은 [option + ~]를 누르면 됨
-	var rawLiteral string = `바로 실행해보면서 배우는 \n Golang`
+	var num int = 10
+	var changef float32 = float32(num)
 
-	//아무리 길게 치고, 엔터를 쳐도 한 줄로 표현된다. 이 때 \n이 특별한 역할을 함
-	var interLiteral string = "바로 실행해보면서 배우는 \nGolang"
+	changei := int8(num)
 
-	plusString := "구름 " + "EDU\n" + "Golang"
+	var str string = "goorm"
+	changestr := []byte(str)
+	str2 := string(changestr)
 
-	fmt.Println(rawLiteral)
-	fmt.Println()
-	fmt.Println(interLiteral)
-	fmt.Println()
-	fmt.Println(plusString)
+	fmt.Println(num)
+	fmt.Println(changef, changei)
+
+	fmt.Println(str)
+	fmt.Println(changef, changei)
+
+	fmt.Println(str)
+	fmt.Println(changestr)
+	fmt.Println(str2)
+
+	//연산의 결괏값과 피연산자의 자료형이 일치하지 않아 컴파일 에러 발생
+	//var num1, num2 int = 3, 4
+	//var result float32 = num1 / num2
+	//
+	//fmt.Prinft("%f", result)
 }
