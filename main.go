@@ -3,28 +3,16 @@ package main
 import "fmt"
 
 func main() {
-	var num int = 10
-	var changef float32 = float32(num)
+	age, name := 24, "길동"
 
-	changei := int8(num)
+	fmt.Printf("안녕 난 %s이야\n", name)
+	fmt.Printf("나이는 %d살이야\n", age)
+	fmt.Printf("반가워")
 
-	var str string = "goorm"
-	changestr := []byte(str)
-	str2 := string(changestr)
+	n := 14
+	var arr [5]int = [5]int{1, 2, 3, 4, 5}
 
-	fmt.Println(num)
-	fmt.Println(changef, changei)
-
-	fmt.Println(str)
-	fmt.Println(changef, changei)
-
-	fmt.Println(str)
-	fmt.Println(changestr)
-	fmt.Println(str2)
-
-	//연산의 결괏값과 피연산자의 자료형이 일치하지 않아 컴파일 에러 발생
-	//var num1, num2 int = 3, 4
-	//var result float32 = num1 / num2
-	//
-	//fmt.Prinft("%f", result)
+	fmt.Printf("내 동생은 %d살이야\n", n)
+	fmt.Printf("%d \n", arr)
+	fmt.Printf("%d %d", n, arr)
 }
